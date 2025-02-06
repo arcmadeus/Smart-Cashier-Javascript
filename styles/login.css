@@ -17,10 +17,17 @@ body {
 
 /* BACKGROUND */
 .home-background {
+  background-image: url("images/home-images/background-paylens.png");
+  background-size: contain; /* or cover */
+  background-position: center;
+  background-repeat: no-repeat;
   position: absolute;
   width: 100%;
-  height: 100%;
-  z-index: 0;
+  max-width: 100vw; /* Adjust as needed */
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -31,17 +38,18 @@ body {
   color: red;
   font-size: 2.5rem;
 }
-
+ 
 .user-container {
   position: relative;
   padding: 5%;
-  background-color: black;
+  background-color: whitesmoke;
   width: 23%;
   height: 50%;
   display: flex;
   justify-content: center;
   margin-left: 30px;
   border-radius: 20px;
+  z-index: 10;
 }
 
 .user-container .button-container {
@@ -55,14 +63,19 @@ body {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  align-items: flex-start; /* Fixed from "left" */
-  z-index: 2;
+  z-index: 0;
+  width: 33%;
+  height: auto;
+  background-color: transparent;
+  margin-top: -25%;
 }
 
 .line {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
   max-width: 33%;
-  height: 5rem;
+  height: 3rem;
+  z-index: 1;
 }
 
 /* COLORS */
@@ -114,23 +127,31 @@ button:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 15;
 }
 
 .logo-image {
   mix-blend-mode: multiply;
-  width: 50px;
-  height: 50px;
+  width: 3rem !important;
+  height: 3rem !important;
   align-items: center;
   justify-content: center;
   display: flex;
-
+  object-fit: contain;
 }
 
 .logo {
+  width: 150px; /* Adjust as needed */
+  height: auto; /* Maintains aspect ratio */
+  max-width: 100%;
   border: 3px solid gold;
   border-radius: 100%;
   padding: 10px;
   background-color: white; 
+}
+
+.for-logo img {
+  flex-shrink: 0;
 }
 
 .logo-container {

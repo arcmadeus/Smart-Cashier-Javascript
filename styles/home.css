@@ -1,304 +1,56 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-
 body {
-  margin: 0;
-  padding: 0;
+  background-image: url(../images/home-images/background-paylens.png);
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
-  background-color: #ffffff;
-  background-image: url("images/home-images/background-paylens.png");
-  mix-blend-mode: multiply;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
-  width: 100vw;
+  flex-wrap: wrap;
 }
 
-/* TOP CONTAINER */
-.top-container {
-  position: relative;
-  z-index: 1;
-  padding-bottom: 20vh; /* Adjusted for better responsiveness */
-}
-
-/* FONTS */
-.bungee-regular {
-  font-family: "Bungee", serif;
-  font-weight: 400;
-  font-style: normal;
-  color: red;
-  font-size: 5rem;
-}
-
-.teko-font {
-  font-family: "Teko", serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
-  font-size: 2.5rem;
-}
-
-/* BACKGROUND */
-.home-background {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-}
-
-/* MIDDLE CONTAINER */
-.middle-container {
-  position: relative;
-  z-index: 1;
-}
-
-/* LINE CONTAINER */
-.middle-container .line-container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  align-items: flex-start; /* Fixed from "left" */
-  z-index: 2;
-}
-
-/* RESPONSIVE ADJUSTMENTS */
-@media (max-width: 768px) {
-  .bungee-regular {
-    font-size: 3rem; /* Smaller font for tablets */
-  }
-
-  .teko-font {
-    font-size: 2rem;
-  }
-
-  .top-container {
-    padding-bottom: 5vh; /* Reduce padding */
-  }
-}
-
-@media (max-width: 480px) {
-  .bungee-regular {
-    font-size: 2.5rem; /* Smaller font for mobile */
-  }
-
-  .teko-font {
-    font-size: 1.8rem;
-  }
-}
-
-
-
-/* MIDDLE CONTAINER */
-.home-logo-container {
-  position: absolute;
-  top: -15%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-/* LINES */
-.middle-container .line {
-  width: 100%;
-  max-width: 33%;
-  height: 5rem;
-  -webkit-box-reflect: right 103%;
-}
-
-/* COLORS */
-.orange {
-  background-color: #fc8156;
-}
-.teal {
-  background-color: #00b4b4;
-}
-.pink {
-  background-color: palevioletred;
-}
-
-/* TEXT */
-.paylens-text,
-.motto-text {
-  margin: -1rem;
-  padding: 0;
-}
-
-/* LOGO */
-.logo-image {
-  mix-blend-mode: multiply;
-  width: 170px;
-  height: 170px;
-}
-
-.logo-container {
-  border: 3px solid gold;
-  border-radius: 100%;
-  padding: 10px;
-  background-color: white;
-  margin-bottom: 2%;
-}
-
-/* RESPONSIVE ADJUSTMENTS */
-@media (max-width: 1000px) {
-  .top-container {
-    margin-bottom: 10%;
-  }
-
-  .home-logo-container {
-    margin-top: 10px;
-  }
-
-  .line {
-    max-width: 50%; /* Increase width on smaller screens */
-  }
-
-  .logo-image {
-    width: 140px;
-    height: 140px;
-  }
-
-  .paylens-text,
-  .motto-text {
-  margin: 0rem;
-  padding: 0;
-}
-
-  .middle-container .line {
-    max-width: 0%;
-  }
-}
-
-@media (max-width: 480px) {
-  .line {
-    max-width: 70%;
-  }
-
-  .logo-image {
-    width: 100px;
-    height: 120px;
-  }
-}
-
-/* HOME BUTTONS */
-.home-buttons {
-  position: relative;
+nav {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 50px;
+  justify-content: space-between;
   width: 100%;
+  height: 5%;
+  border: 10px solid red;
 }
 
-.home-buttons button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-  margin-right: 10px;
-  z-index: 3;
-  position: relative;
-  width: 20rem;
-  height: 3rem;
+.nav-content {
+  display: flex;
+  flex-direction: row;
+  width: 85%;
+  align-self: center;
+  justify-content: space-between;
+  background-color: #f78e69;
+  border-radius: 30px;
 }
 
-.login-button {
-  background-color: #00b4b4;
-  color: #ffffff;
-}
-
-.register-button {
-  background-color: #fc8156;
-  color: #ffffff;
-}
-
-@media (max-width: 768px) {
-  .home-buttons {
-    flex-direction: column;
-  }
-
-  .home-buttons button {
-    width: 80%;
-    max-width: 15rem;
-  }
-}
-
-.login-button:hover,
-.register-button:hover {
-  background-color: #555;
-}
-
-/* BOTTOM CONTAINER */
-.footer {
-  position: fixed;
+nav .logo {
   display: flex;
   flex-direction: column;
-  left: 0;
-  bottom: 0;
-  width: 100vw;
-  height: 50px; /* Increased height to make it visible */
-  background-color: white; /* Set a background color */
-  align-items: center;
+  width: 15%;
   justify-content: center;
-  z-index: 10; /* Ensure it appears above other content */
+  align-content: center;
 }
 
-.footer .line-container {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  width: 100vw;
-  height: 10rem;
-  justify-content: flex-end;
+nav .logo .logo-image {
+  width: 50%;
+  height: auto;
 }
 
-.footer .line {
-  width: 1000%; /* Set a fixed width */
-  height: 10px;
+.button-container {
+  justify-content: space-evenly;
+  margin: 3%;
 }
 
-.pink {
-  background-color: palevioletred;
+.search-container {
+  margin: 3%; 
 }
 
-.teal {
-  background-color: #00b4b4;
-}
-
-.orange {
-  background-color: #fc8156;
-}
-
-/* Positioning the lines properly */
-.bottom-container .line {
-  position: absolute;
-}
-
-.bottom-container .line.pink {
-  bottom: 0px;
-}
-
-.bottom-container .line.teal {
-  bottom: 15px;
-}
-
-.bottom-container .line.orange {
-  bottom: 30px;
-}
-
-/* RESPONSIVE ADJUSTMENTS */
-@media (max-width: 768px) {
-  .footer .line {
-    width: 0;
-  }
+nav button {
+  background-color: #ffe5b6;
+  border-radius: 20px;
+  border: none;
+  padding: 10px;
+  width: 23%;
 }

@@ -72,6 +72,21 @@ nav .logo .logo-image {
   width: 30%;
 }
 
+.search-button {
+  background-color: #a17659;
+  color: #f4e9dc;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: none;
+}
+
+.search-bar {
+  width: 70%;
+  border: none;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
 nav .button-container button {
   background-color: #ffe5b6;
   border: none;

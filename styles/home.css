@@ -239,3 +239,20 @@ main {
 }
 
 /*ORDER SUMMARY*/
+.order-summary-container {
+  background-color: #fffbe2;
+  border-radius: 30%;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.order-summary {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.order-summary-body {
+  
+}

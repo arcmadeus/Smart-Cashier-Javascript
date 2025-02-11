@@ -209,13 +209,6 @@ main {
   height: 100%;
 }
 
-.order-summary-container {
-  border: 5px solid green;
-  width: 100%;
-  height: 50%;
-  max-width: 20%;
-}
-
 .product-button-container {
   display: flex;
   flex-direction: row;
@@ -240,11 +233,20 @@ main {
 
 /*ORDER SUMMARY*/
 .order-summary-container {
+  border: 5px solid green;
+  width: 100%;
+  height: 50%;
+  max-width: 20%;
+  min-height: 100%;
+}
+
+.order-summary-container {
   background-color: #fffbe2;
-  border-radius: 30%;
+  border-radius: 5%;
   width: 30%;
   display: flex;
   flex-direction: column;
+  
 }
 
 .order-summary {
@@ -254,5 +256,23 @@ main {
 }
 
 .order-summary-body {
-  
+  max-height: 100%;
+}
+
+.order-summary-body .order-summary-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.order-summary-info span {
+  font-size: 1rem;
+}
+
+.order-summary-container .scroll-box {
+  overflow: auto; /* Enables scrolling */
+  padding: 10px;
 }
